@@ -51,3 +51,6 @@ WhatsApp bot implementation and local configuration steps: see `WHATSAPP_SETUP.m
 Run `python -m unittest -v test_connector test_whatsapp_bot` for the local checks.
 
 Telegram alternative (without Meta registration or public webhook): see `TELEGRAM_SETUP.md`.
+
+Cloud development setup, dependency installation, and test commands: see
+[Cloud environment setup](docs/cloud-environment/README.md).
