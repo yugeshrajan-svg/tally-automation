@@ -1,0 +1,17 @@
+{
+  "order_id": "AUTO-DEMO-001",
+  "company": "Oil Comapny",
+  "date": "2026-04-01",
+  "customer": "Karthick",
+  "sales_ledger": "Oil Sales",
+  "cgst_ledger": "Output Cgst",
+  "sgst_ledger": "Ouput Sgst",
+  "item": "Used Oil Kg",
+  "unit": "kgs",
+  "quantity": "100",
+  "rate": "95",
+  "seller_state": "Tamil Nadu",
+  "place_of_supply": "Tamil Nadu",
+  "vehicle_number": "TN01AB1234",
+  "destination": "Chennai"
+}

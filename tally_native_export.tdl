@@ -1,0 +1,18 @@
+;; Native PDF queue: exports existing saved Sales vouchers only.
+[System : Variable]
+    BillingNativeLast : ""
+[Variable : BillingNativeLast]
+    Type : String
+[System : Event]
+    BillingPDFBoot : System Start : Yes : Call : BillingStartPDFTimer
+    BillingPDFStart : Load Company : Yes : Call : BillingStartPDFTimer
+    BillingPDFPoll : Timer : ##SVCurrentCompany = "Oil Comapny" : Call : BillingPollNativePDF
+[#Menu : Gateway of Tally]
+    Add : Item : Start Bot PDF Export : Call : BillingStartPDFTimer
+[Function : BillingStartPDFTimer]
+    010 : Start Timer : BillingPDFPoll : 3
+[Function : BillingPollNativePDF]
+    010 : If : NOT $$IsFileExists:"C:/Users/chand/OneDrive/Documents/ChatGPT/tally automation'/local_state/native_pdf_job.tdl"
+    020 : Return
+    030 : End If
+    040 : Execute TDL : "C:/Users/chand/OneDrive/Documents/ChatGPT/tally automation'/local_state/native_pdf_job.tdl" : No : Call : BillingNativeJob
