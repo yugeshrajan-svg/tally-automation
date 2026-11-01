@@ -1,0 +1,7 @@
+__pycache__/
+drafts/
+local_state/
+output/
+whatsapp_config.json
+telegram_token.txt
+telegram_config.json
